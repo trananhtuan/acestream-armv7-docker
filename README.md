@@ -12,7 +12,7 @@ cd acestream-armv7-docker
 ```
 Edit `acestream.conf` to change access token, change other options if needed. Login and password is optional.
 ```
-docker build --network=host --tag=acestream-armv7 .
+docker build --tag=acestream-armv7 .
 docker run --security-opt seccomp=profile.json --name acestream-armv7 --restart=always --network=host acestream-armv7
 ```
 

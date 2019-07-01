@@ -11,8 +11,8 @@ RUN cd /tmp/acestream.engine && \
     mv androidfs/acestream.engine / && \
     mkdir -p /storage && \
     mkdir -p /system/etc && \
-    cp -L /etc/resolv.conf /system/etc/resolv.conf && \
-    cp -L /etc/hosts /system/etc/hosts && \
+    ln -s /etc/resolv.conf /system/etc/resolv.conf && \
+    ln -s /etc/hosts /system/etc/hosts && \
     #echo "67.215.246.10 router.bittorrent.com" >> /system/etc/hosts && \
     #echo "87.98.162.88 dht.transmissionbt.com" >> /system/etc/hosts && \
     cat /system/etc/resolv.conf && cat /system/etc/hosts && \
